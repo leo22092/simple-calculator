@@ -8,12 +8,16 @@ from simple_calculator.ui import CalculatorUI
 from importlib.metadata import version
 
 
+from simple_calculator.post_install import install_desktop_files
+
 
 
 def get_version():
     return version("simple-calculator")
 
+
 def main():
+    install_desktop_files()
 
     parser=argparse.ArgumentParser(description="Simple Calculator application")
     

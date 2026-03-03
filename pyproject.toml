@@ -8,7 +8,7 @@ version = "1.0.1"
 description = "A simple calculator with GUI and CLI"
 authors = [{name="Your Name"}]
 requires-python = ">=3.8"
-exclude = ["build"]
+
 
 [project.scripts]
 simple-calculator = "simple_calculator.main:main"
@@ -18,3 +18,8 @@ package-dir = {"" = "src"}
 
 [tool.setuptools.packages.find]
 where = ["src"]
+exclude = ["build","build"]
+
+
+[tool.setuptools.package-data]
+simple_calculator = ["assets/*"]

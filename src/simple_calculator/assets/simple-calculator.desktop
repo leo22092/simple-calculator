@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Simple Calculator
+Comment=Professional Python Calculator
+Exec=simple-calculator --gui
+Icon=simple-calculator
+Terminal=false
+Type=Application
+Categories=Utility
+

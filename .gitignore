@@ -1,0 +1,23 @@
+# Build artifacts
+build/
+dist/
+*.egg-info/
+# Python cache
+__pycache__/
+*.pyc
+
+# Coverage
+htmlcov/
+.coverage
+
+#Mypy
+.mypy_cache/
+
+#Virtualenv
+vev/
+.env/
+#IDE
+.vscode/
+.idea/
+#OS
+.DS_Store
