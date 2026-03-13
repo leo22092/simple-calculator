@@ -3,6 +3,7 @@ import sys
 import math
 import logging
 import os
+import select
 
 # Set up logging
 log_dir = os.path.join(os.path.expanduser("~"), ".local", "state", "calcu")
@@ -48,8 +49,8 @@ def main():
                 print()
                 break
     else:
-        # Read from stdin if piped
-        if not sys.stdin.isatty():
+        # Read from stdin if piped data actually exists
+        if select.select([sys.stdin,],[],[],0.0)[0]:
             expr = sys.stdin.read().strip()
             if expr:
                 print(calculate(expr))

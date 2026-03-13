@@ -8,6 +8,23 @@ class CalculatorUI(tk.Tk):
         self.geometry("300x400")
         self.resizable(False, False)
         
+        import os
+        icon_paths = [
+            os.path.join(os.path.expanduser("~"), ".local", "share", "icons", "hicolor", "256x256", "apps", "calcu.png"),
+            "/usr/share/pixmaps/calcu.png",
+            "/usr/share/icons/hicolor/256x256/apps/calcu.png",
+            os.path.join(os.path.dirname(__file__), "calcu.png"),
+            "calcu.png"
+        ]
+        for p in icon_paths:
+            if os.path.exists(p):
+                try:
+                    icon = tk.PhotoImage(file=p)
+                    self.iconphoto(True, icon)
+                    break
+                except Exception:
+                    pass
+        
         self.display_var = tk.StringVar()
         
         display = tk.Entry(self, textvariable=self.display_var, font=('Arial', 24), bd=10, insertwidth=2, width=14, borderwidth=4, justify='right')
