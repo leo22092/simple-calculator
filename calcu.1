@@ -1,0 +1,23 @@
+.TH CALCU 1 "March 2026" "0.1.0" "Calcu Manual"
+.SH NAME
+calcu \- a minimal calculator
+.SH SYNOPSIS
+.B calcu
+[\fB\-i\fR] [\fIexpression\fR]
+.SH DESCRIPTION
+.B calcu
+is a minimal installable calculator with both a graphical user interface and a command-line interface. By default, running it without arguments starts the GUI.
+.SH OPTIONS
+.TP
+.B \-i, \-\-interactive
+Start the interactive terminal calculator.
+.SH EXAMPLES
+.B calcu 2 + 2
+.br
+.B calcu "math.sin(math.pi / 2)"
+.SH FILES
+.TP
+.I ~/.local/state/calcu/calcu.log
+Error log file for calcu
+.SH AUTHOR
+Leo

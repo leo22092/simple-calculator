@@ -1,0 +1,9 @@
+[Desktop Entry]
+Version=1.0
+Type=Application
+Name=Calcu
+Comment=A minimal calculator
+Exec=calcu
+Icon=calcu
+Terminal=false
+Categories=Utility;Calculator;
